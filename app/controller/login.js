@@ -7,7 +7,11 @@ class LoginController extends Controller {
             this.ctx.body = Object.assign({}, this.ctx.user, { code: 'Unauthorized' });
             return;
         }
-        this.ctx.body = this.ctx.user;
+        let user = this.ctx.user;
+        if (user.password) {
+            delete user.password
+        }
+        this.ctx.body = user;
     }
     async loginOut() {
         this.ctx.logout();
