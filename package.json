@@ -1,0 +1,53 @@
+{
+  "name": "tsegg",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "async-validator": "^1.8.2",
+    "captchapng": "0.0.1",
+    "egg": "^2.2.1",
+    "egg-mongoose": "^2.2.0",
+    "egg-passport": "^2.0.1",
+    "egg-scripts": "^2.5.0",
+    "egg-session": "^3.1.0",
+    "node-uuid": "^1.4.8",
+    "passport-local": "^1.0.0",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.0.0",
+    "egg-bin": "^4.3.5",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.14.0",
+    "eslint": "^4.11.0",
+    "eslint-config-egg": "^6.0.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --port=80 --daemon --title=egg-server-showcase",
+    "stop": "egg-scripts stop --title=egg-server-tsegg",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod",
+    "tsc:w": "tsc -p tsconfig.json -w"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT"
+}
