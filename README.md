@@ -43,6 +43,13 @@
     $ npm run dev 
 
     //打开地址 http://127.0.0.1:9898  查看
+    //数据库需要插入一条admin的数据
+    mongodb 里记得插入
+      db.users.insert({
+      "userName":"admin",
+      "password":"admin",
+      "isAdmin": true
+  })
 ```
 
 **后端**
